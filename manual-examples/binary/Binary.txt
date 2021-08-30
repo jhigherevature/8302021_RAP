@@ -1,3 +1,5 @@
+This is my change to be pushed to the Repo.
+
 DECIMAL (Base-10)
 000
 001
@@ -54,3 +56,5 @@ Two's Compliment:
 
 0000 1111 : 15
 1000 0001 : -15
+
+Remember that you always need to know how many bits you are looking at in Binary!!
