@@ -1,0 +1,56 @@
+DECIMAL (Base-10)
+000
+001
+002
+003
+004
+005
+006
+007
+008
+009
+010
+011
+012
+..
+019
+020
+
+BINARY (Base-2)
+0000 0000 - 0
+0000 0001 - 1
+0000 0010 - 2
+0000 0011 - 3
+0000 0100 - 4
+
+Negative in Binary:
+	-How many Binary Digits (bits) we are looking at/interested in
+	-How are we representing the numbers? i.e., one's compliment or two's compliment?
+		-Two's compliment is the standard for computers
+
+One's Compliment:
+	Negative numbers are the inverse of every bit
+0001 : 1
+1110 : -1
+
+0010 : 2
+1101 : -2
+
+0000 : 0
+1111 : -0
+
+0001
+1110
+
+1111 : -0
+
+
+Two's Compliment:
+	Find one's compliement
+	Then, add 1 to that value
+0001 : 1
+1111 : -1
+0000 : 0
+
+0000 1111 : 15
+1000 0001 : -15

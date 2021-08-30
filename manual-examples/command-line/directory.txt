@@ -1,0 +1,6 @@
+A/
+Binary.txt
+directory.txt
+A/
+Binary.txt
+directory.txt
