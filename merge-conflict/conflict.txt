@@ -1,2 +1,4 @@
+This is a change from the main branch!
+This is going to cause some issues when we push/pull!!
 This file will be used to demonstrate merge conflicts between branches
 Currently we are on the main branch
