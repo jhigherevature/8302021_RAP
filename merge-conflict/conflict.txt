@@ -1,0 +1,2 @@
+This file will be used to demonstrate merge conflicts between branches
+Currently we are on the main branch
