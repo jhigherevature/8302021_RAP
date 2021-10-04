@@ -15,6 +15,12 @@ public class ArrayStack {
 	 */
 	private Integer[] stack = new Integer[5];
 	
+	public ArrayStack() { }
+	
+	public ArrayStack(int size) {
+		stack = new Integer[size];
+	}
+	
 	/*
 	 * This keeps track of the size of our array. 
 	 * 'lastElementIndex' is a bit of a misnommer...

@@ -20,7 +20,10 @@ public class NodeStack {
 		push(node);
 	}
 	/*
-	 * 	B - top
+	 *  C - top 
+	 *  |
+	 *  \/
+	 * 	B
 	 * 	|
 	 * 	\/
 	 * 	A
