@@ -101,7 +101,7 @@ public class BasicIterableNodeStack implements Iterable<Node> {
 
 /*
  * The following is a simple Node class (similar to our 
- * Day8 Example). We place this class here because we 
+ * Day 16 Example). We place this class here because we 
  * are only planning to use this Node within the context 
  * of this class and potentially other classes within
  * this package.
