@@ -19,11 +19,20 @@ As you continue to work on your project, you will be responsible for various mil
 * Additionally, create at least 2 records per table to use for testing purposes, and provide the DML code for these records.
 * Create Model Classes which represent how data is stored in your database.
   * Model classes in Java should follow a Java Bean Design Pattern
+* Using the Scanner class, create classes that support printing messages to your user and a class which can parse user input from a Scanner to perform different actions.
+  * Support the ability to "login" using dummy data (this does NOT require that your login input actually send a request to your DB).
+  * After "logging in" a menu should provide functionality that is relevant to the type of user logged in.
+  * Print appropriate messages for each type of action attempted.
+    * i.e. selecting "deposit" asks the user to enter a deposit amount.
 
 ### Milestone 3 - Due Week 10
-* Create an SQL Connection or Database Utility Class which can allow for communication with your database.
-* Include a tester class which prints a message on establishing a successful connection to the database.
-* Create a Data Access Object class which contains methods that add, remove, delete, and update rows in an associated database.
+* Correctly configure a POM.xml file for your project.
+* Create an SQL Connection or Database Utility class which establishes a connection to your database
+  * This class should use login credentials for a user that you create using DDL and DCL to allow for access to part or all of your database tables and schemas
+* Create a tester class which prints a message on establishing a successful connection to the database
+  * Provide a screenshot showcasing that you have successfully connected to your database
+* Create a Data Access Object Interface and Implementation class which contains an add, remove, delete and update method for at least one of your database tables
+  * The DAO code should leverage an associated model class created in the previous milestone.
 
 ### Milestone 4 - Due Week 11
 * Add Log4J2 configurations to your Maven POM file
