@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.revature</groupId>
+  <artifactId>com.revature</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Banking_App</name>
+  <description>This is our banking application example files</description>
+  
+  <!-- This is a mark-up language code comment...
+  		By default, Maven created a Java project using Java version 5.
+  		To update to a different version, we must add an element to our
+  		POM.xml file, called the properties element
+  		
+  		If you are using version 8 of Java or earlier, the version number is
+  		1.n, n being the version of java:
+  		<maven.compiler.source>1.8</maven.compiler.source>
+   		<maven.compiler.target>1.8</maven.compiler.target>
+   		
+   		After making a change to your POM.xml file, remember to update
+   		your Maven project:
+   			right-click
+   			Maven
+   			Update project...
+   -->
+   <properties>
+   		<maven.compiler.source>12</maven.compiler.source>
+   		<maven.compiler.target>12</maven.compiler.target>
+   </properties>
+   
+   <!-- We will add a number of dependencies below to incorporate more
+   		libraries and functionality to our project. Including: 
+   			database driver
+   			JUNIT Suite
+   			Mockito for test mocks and stubs
+   			Logger
+   		-->
+   <dependencies>
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+		    <groupId>org.postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		    <version>42.3.0</version>
+		</dependency>
+   </dependencies>
+</project>
