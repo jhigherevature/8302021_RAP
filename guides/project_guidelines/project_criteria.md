@@ -3,10 +3,10 @@
 ## Description
 
    The Bank app is a console-based application that simulates banking operations. A customer can apply for an account, view their balance, and make withdrawals and deposits. An employee can approve or deny accounts and view account balances for their customers. Note, you are free to use a different project theme and include different functionality, however, your project must still use the same technologies covered during training, as well as fulfil certain requirements. If you would like to use a different theme you must let your instructor know as soon as possible.
-	
+
 ## Purpose
 
-   We want to see that you can meet deadlines and that you can code. You are expected to complete the following requirements and give a 5 minute presentation of your project to our QC team.
+   We want to see that you can meet deadlines and that you can code. You are expected to complete the following requirements and give a 5-10 minute presentation of your project to our QC team.
 
 ## Functionality Overview
 * A user can login.
@@ -32,8 +32,7 @@
 * JUnit tests are written which test functionality of class methods.
 
 ## Grading Criteria
-	Your project will be evaluated using the following categories. Please make sure that you 
-
+	Your project will be evaluated using the following categories:
 1. Functionality should reflect the below user stories.
 2. Data is stored in a database.
 3. Data Access is performed through the use of JDBC in a data layer consisting of Data Access Objects.
@@ -55,9 +54,11 @@
 * As an employee, I can approve or reject an account.
 * As an employee, I can view a customer's bank accounts.
 * As a user, I can register for a customer account.
-* As a customer, I can post a money transfer to another account.
-* As a customer, I can accept a money transfer from another account.
-* As an employee, I can view a log of all transactions.
+* As a customer, I can post a money transfer between my own accounts.
+* As an employee, I can view a log of all transactions [optional: This log can be parsed and viewed within the application].
+
+* [optional] As a customer, I can post a money transfer to another customer's account
+* [optional] As a customer, I can accept a money transfer, from another customer, into my account.
 
 ### Project Evaluation Parameters
 Your project will be evaluted using the following criteria:
