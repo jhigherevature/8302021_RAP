@@ -19,7 +19,6 @@ CREATE OR REPLACE FUNCTION count_emp_salary_range(
 -- Use the select statement to call a function
 SELECT count_emp_salary_range(90000, 160000);
 
-
 /*
  * Creating Sequences allow for more control over the automatic
  * scaling of a value, typically used with ID (effectively our own
@@ -68,10 +67,6 @@ CREATE TABLE user_login (
 	login_name VARCHAR(200),
 	login_pass VARCHAR(200)
 );
-
-INSERT INTO user_login VALUES (DEFAULT, 'user_1','pass_1');
-INSERT INTO user_login VALUES (DEFAULT, 'user_2','pass_2');
-INSERT INTO user_login VALUES (DEFAULT, 'user_3','pass_3');
 
 /*
  * Stored Procedure : An entity, similar to a function, which performs
