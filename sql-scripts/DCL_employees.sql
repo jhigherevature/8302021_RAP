@@ -19,10 +19,12 @@ CREATE USER customers WITH PASSWORD 'password';
 -- DCL: 
 GRANT SELECT, UPDATE, INSERT, DELETE ON examples.employees TO customers;
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA examples TO customers;
+GRANT ALL PRIVILEGES ON SCHEMA examples TO customers;
 --REVOKE ALL PRIVILEGES ON ALL TABLES IN SCHEMA examples FROM customers;
 --REVOKE ALL PRIVILEGES ON examples.employees FROM customers;
 
-
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO customers;
+GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA examples TO customers;
 /*
  * Sequences and Functions:
  * 
