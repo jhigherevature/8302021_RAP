@@ -165,7 +165,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	public boolean deleteEmployeeById(Integer id) {
 		PreparedStatement ps = null;
 		try (Connection conn = ConnectionUtility.getConnection()) {
-			String query = "DELETE FROM examples.examployees WHERE emp_id=?";
+			String query = "DELETE FROM examples.employees WHERE emp_id=?";
 			ps = conn.prepareStatement(query);
 			ps.setInt(1, id);
 			ps.executeUpdate();
