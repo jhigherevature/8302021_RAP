@@ -9,8 +9,8 @@ import com.revature.banking.models.Employee;
 public class Simulator {
 	public static void main(String[] args) {
 		EmployeeDAO edao = new EmployeeDAOImpl();
-//		Employee e = edao.selectEmployeeById(2000);
-//		System.out.println(e);
+		Employee e = edao.selectEmployeeById(2000);
+		System.out.println(e);
 		
 		List<Employee> eList = edao.selectAllEmployees();
 		for (Employee emp : eList) {
