@@ -7,11 +7,14 @@ import com.revature.banking.dao.EmployeeDAO;
 import com.revature.banking.dao.EmployeeDAOImpl;
 import com.revature.banking.models.Employee;
 import com.revature.banking.models.Example;
+import com.revature.banking.utilities.DaoImplCreator;
 
 public class Simulator {
 	public static void main(String[] args) {
-//		EmployeeDAO edao = new EmployeeDAOImpl();
-//		Employee e = edao.selectEmployeeById(2000);
+		// EmployeeDAO eDao = new EmployeeDAOImpl();
+		// Employee e = edao.selectEmployeeById(1000);
+		
+		Employee e = DaoImplCreator.getEmpDao().selectEmployeeById(2000);
 //		System.out.println(e);
 //		
 //		List<Employee> eList = edao.selectAllEmployees();
