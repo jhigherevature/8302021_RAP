@@ -93,6 +93,57 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	}
 
 	@Override
+	public Employee selectEmployeeByLoginId(Integer loginId) {
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		Employee emp = null;
+
+		try (Connection conn = ConnectionUtility.getConnection();) {
+			/*
+			 * The '?' below acts as a marker for a parameter within our SQL query. The
+			 * preparedStatement object provides methods that allow you do insert values
+			 * into these marker locations using the position of the marker (indexing here,
+			 * starts at 1) and also allows you to set the datatype of the value as well!
+			 */
+			String query = "SELECT * FROM examples.employees WHERE login_id=?";
+
+			/*
+			 * The connection object's prepareStatement method will convert a String to a
+			 * PreparedStatement object
+			 */
+			ps = conn.prepareStatement(query);
+
+			/*
+			 * The preparedStatement object supplies methods to set values for the marker
+			 * indexes within the String query that was created above
+			 */
+			ps.setInt(1, loginId);
+
+			/*
+			 * The executeQuery method of the prepared statement will return a result set,
+			 * based on the values that are retrieved from the database.
+			 * 
+			 * One thing to keep in mind about the resultSet. As it's name implies, it is a
+			 * collection of data
+			 */
+			rs = ps.executeQuery();
+
+			while (rs.next()) {
+				emp = new Employee();
+				emp.setEmp_id(rs.getInt(1));
+				emp.setEmp_name(rs.getString(2));
+				emp.setEmp_title(rs.getString("emp_title"));
+				emp.setEmp_salary(rs.getDouble("emp_salary"));
+				emp.setLogin_id(rs.getInt(5));
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return emp;
+	}
+	
+	@Override
 	public List<Employee> selectAllEmployees() {
 		Statement stmt = null;
 		ResultSet rs = null;

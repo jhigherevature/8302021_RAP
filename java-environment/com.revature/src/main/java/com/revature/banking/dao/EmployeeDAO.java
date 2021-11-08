@@ -11,6 +11,7 @@ import com.revature.banking.models.Employee;
 public interface EmployeeDAO {
 	public boolean insertIntoEmployees(Employee emp);
 	public Employee selectEmployeeById(Integer id);
+	public Employee selectEmployeeByLoginId(Integer loginId);
 	public List<Employee> selectAllEmployees();
 	public boolean updateEmployee(Employee emp);
 	public boolean deleteEmployeeById(Integer id);
