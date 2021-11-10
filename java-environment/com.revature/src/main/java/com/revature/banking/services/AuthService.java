@@ -11,6 +11,8 @@ import com.revature.banking.models.Employee;
 import com.revature.banking.models.User_Login;
 
 public class AuthService {
+	private static User_Login loggedIn;
+	
 	private UserLoginDAO ulDao;
 	private EmployeeDAO eDao;
 	private CustomerDAO cDao;
@@ -29,17 +31,18 @@ public class AuthService {
 		}
 		
 		User_Login login = ulDao.selectUserLoginByNameAndPass(username, password);
+		if (login == null) {
+			// no login found with username/password combo
+			return null;
+		}
+		
 		return getUserLoginType(login);
 	}
 	
 	public String getUserLoginType(User_Login uLogin) {
-		if (uLogin == null) {
-			// no login provided
-			return null;
-		}
-		
 		Employee emp = eDao.selectEmployeeByLoginId(uLogin.getLogin_id());
 		if (emp != null) {
+			loggedIn = uLogin;
 			return "employee";
 		}
 		

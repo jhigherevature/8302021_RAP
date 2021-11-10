@@ -43,24 +43,36 @@ public class Simulator {
 		 * Another method:
 		 * INSERT INTO schemaName.tableName VALUES(NULL,?,?,CURRENT_DATE,?)
 		 */
-//		System.out.println(toAdd);
-		
-		UsersDAO uDao = new UsersDAOImpl();
-		List<User> ulist = uDao.selectAllUsers();
-		System.out.println(ulist);
+//		System.out.println(toAdd);		
+//		UsersDAO uDao = new UsersDAOImpl();
+//		List<User> ulist = uDao.selectAllUsers();
+//		System.out.println(ulist);
+//		
+//		CustomerDAO cDao = new CustomerDAOImpl();
+//		List<Customer> cList = cDao.selectAllCustomers();
+//		System.out.println(cList);
 		
 		UserLoginDAO ulDao = new UserLoginDAOImpl();
-		List<User_Login> ulList = ulDao.selectAllUserLogin();
-		System.out.println(ulList);
-		
-		CustomerDAO cDao = new CustomerDAOImpl();
-		List<Customer> cList = cDao.selectAllCustomers();
-		System.out.println(cList);
+//		List<User_Login> ulList = ulDao.selectAllUserLogin();
+//		System.out.println(ulList);
 		
 		User_Login check = ulDao.selectUserLoginByNameAndPass("maggie_login", "maggie_pass");
 		AuthService auth = new AuthService();
 		auth.init();
-		System.out.println(auth.AuthenticateUser("maggie_login", "maggie_pass"));
-		System.out.println(auth.AuthenticateUser("tyler_login", "tyler_pass"));
+		// the following two strings obtained via Scanner/input collection
+		String uNameInput = "maggie_login";
+		String uPassInput = "maggie_pass"; 
+		
+		// verify that login credentials for user...
+		String loginType = auth.AuthenticateUser(uNameInput, uPassInput);
+		
+		if (loginType.equals("employee")) {
+			// create "employeeActionService" and call the appropriate method
+		} else if (loginType.equals("customer")) {
+			
+		}
+		
+//		System.out.println(auth.AuthenticateUser("maggie_login", "maggie_pass"));
+//		System.out.println(auth.AuthenticateUser("tyler_login", "tyler_pass"));
 	}
 }
