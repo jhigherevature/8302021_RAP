@@ -20,7 +20,7 @@ CREATE TABLE examples.users (
 );
 
 -- DDL for user_login table
-CREATE TABLE user_login (
+CREATE TABLE examples.user_login (
 	login_id INTEGER DEFAULT nextval('login_id_seq') PRIMARY KEY,
 	login_name VARCHAR(200),
 	login_pass VARCHAR(200)

@@ -1,0 +1,39 @@
+<!Doctype html>
+<html>
+	<head>
+		<!-- meta tags here as well... -->
+		<title>
+			index page
+		</title>
+	</head>
+	<body>
+		<h1>Heading Size 1</h1>
+		<h3>Heading Size 3</h3>
+		<p href="http://www.google.com">This doesnt go to google!</p>
+		<a href="http://www.google.com" target="_blank">Click for Google</a>
+		
+		
+		<!-- An HTML form will allow you to create a basic element to 
+			send http requests:
+			We want to specify 2 attributes for the form (and 2* for the input field)
+			
+			method - the type of HTTP request to send
+			action - where to send the actual request
+			
+			input field attributes:
+			type - how are we going to obtain the data? (default 'text')
+			name - allow you to provide a key/identifier for the actual attribute
+					This is required for a server to parse the information from the
+					http request
+		-->
+		<form action="https://www.google.com/search" method="POST">
+			<!-- 
+				These get consolidated
+				<input type="text" name="q">
+				<input type="text" name="q">
+			-->
+			<input type="text" name="q">
+			<input type="submit">
+		</form>
+	</body>
+</html>

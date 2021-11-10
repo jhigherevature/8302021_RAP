@@ -10,7 +10,6 @@ import java.util.List;
 
 import com.revature.banking.models.Employee;
 import com.revature.banking.utilities.ConnectionUtility;
-import com.revature.logging.LogSimulator;
 
 /*
  * Implementation classes for the DAO interface provide a way
@@ -90,9 +89,6 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		if (emp != null)
-			LogSimulator.getLogger().trace("Employee ID: " + id + ", retrieved!");
 		
 		return emp;
 	}
@@ -189,7 +185,6 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 			e.printStackTrace();
 		}
 
-		LogSimulator.getLogger().trace("All employees queried");
 		return eList;
 	}
 
