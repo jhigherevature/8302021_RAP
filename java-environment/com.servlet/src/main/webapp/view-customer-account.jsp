@@ -24,6 +24,15 @@
 	<table>
 		<tr>
 			<th>NAME</th>
+			<!--
+				Although the example below looks to be accessing the private
+				field of the Customer class directly (see the com.revature.banking.models.Customer class)
+				it is actually calling the customer.getCust_name() method using conventions.
+				
+				The convention specifically is to call a method called 'getVar_Name' using the
+				exact capitalization that is provided (it will capitalize the first letter of
+				the field).
+			 -->
 			<td>${customer.cust_name}</td>
 		</tr>
 	</table>

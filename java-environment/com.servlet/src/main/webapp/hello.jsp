@@ -14,5 +14,10 @@
 	</a>
 
 	<p>This is the data from the servlet: ${helloMessage}</p>
+	
+	<%
+	int num = 5;
+	out.println(num);
+	%>
 </body>
 </html>

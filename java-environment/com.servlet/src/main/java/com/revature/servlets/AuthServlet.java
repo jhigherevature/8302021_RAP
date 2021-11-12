@@ -11,13 +11,22 @@ import javax.servlet.http.HttpSession;
 
 import com.revature.banking.services.AuthService;
 
+/*
+ * The @WebServlet Annotation (or another annotation described in another library/framework
+ * that is leveraged in your application, such as Spring)
+ * 
+ * Is used to map the Servlet in the deployment descriptor automatically, and associate
+ * the URL described in the parameter list of the annotation
+ */
 @WebServlet("/login")
 public class AuthServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)  throws ServletException, IOException {
 		String login_name = request.getParameter("login_name");
 		String login_pass = request.getParameter("login_pass");
 		String type = AuthService.getAuthenticationSingleton().AuthenticateUser(login_name, login_pass);
+		
 		HttpSession session = request.getSession(true);
+		
 		if (type == null) {
 			response.sendRedirect("failed-login.jsp");
 			return;
