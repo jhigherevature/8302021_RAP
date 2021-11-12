@@ -9,8 +9,16 @@
 <body>
 	<h1>Welcome!</h1>
 	<p>Check This out!</p>
-	<a href="http://localhost:8080/com.servlet/hello">
+	<a href="http://localhost:8080/check/hello">
 		Click here to go to Hello page!
 	</a>
+	
+	<h2>Login:</h2>
+	<form action="login" method="POST">
+		Name: <input type="text" name="login_name"><br />
+		Pass: <input type="password" name="login_pass"><br />
+		
+		<input type="submit">
+	</form>
 </body>
 </html>

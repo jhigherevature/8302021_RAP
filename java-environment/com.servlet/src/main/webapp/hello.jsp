@@ -9,7 +9,7 @@
 <body>
 	<h1>Hello World!</h1>
 	
-	<a href="http://localhost:8080/com.servlet"> 
+	<a href="http://localhost:8080/check"> 
 		Click here to go back to the index page!
 	</a>
 

@@ -46,6 +46,6 @@
 				<version>3.3.1</version>
 			</plugin>
 		</plugins>
-		<finalName>check</finalName>
+		<finalName>com.servlet</finalName>
 	</build>
 </project>

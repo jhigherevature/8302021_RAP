@@ -16,6 +16,27 @@ public class AuthService {
 	private CustomerDAO cDao;
 	// Customer and System Admin Daos...
 	
+	private static AuthService auth = new AuthService ();
+	private static Customer currentCustomer;
+	private static Employee currentEmployee;
+	
+	private AuthService() { }
+	
+	public static AuthService getAuthenticationSingleton() {
+		if (auth.ulDao == null || auth.eDao == null || auth.cDao == null)
+			auth.init();
+		
+		return auth;
+	}
+	
+	public static Customer getCurrentCustomer() {
+		return currentCustomer;
+	}
+	
+	public static Employee getCurrentEmployee() {
+		return currentEmployee;
+	}
+	
 	public void init() {
 		ulDao = new UserLoginDAOImpl();
 		eDao = new EmployeeDAOImpl();
@@ -38,13 +59,13 @@ public class AuthService {
 			return null;
 		}
 		
-		Employee emp = eDao.selectEmployeeByLoginId(uLogin.getLogin_id());
-		if (emp != null) {
+		currentEmployee = eDao.selectEmployeeByLoginId(uLogin.getLogin_id());
+		if (currentEmployee != null) {
 			return "employee";
 		}
 		
-		Customer cust = cDao.selectCustomerByLoginId(uLogin.getLogin_id());
-		if (cust != null) {
+		currentCustomer = cDao.selectCustomerByLoginId(uLogin.getLogin_id());
+		if (currentCustomer != null) {
 			return "customer";
 		}
 		
