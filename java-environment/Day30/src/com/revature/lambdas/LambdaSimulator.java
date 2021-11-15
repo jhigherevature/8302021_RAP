@@ -10,9 +10,9 @@ public class LambdaSimulator {
 		};
 		hLam.printHello();
 		
-		PrintInputInterface pii = (i, v) -> {
-			System.out.println("String was : " + i.toLowerCase() 
-					+ "Value was: " + (v*5));
-		};
+//		PrintInputInterface pii = (i, v) -> {
+//			System.out.println("String was : " + i.toLowerCase() 
+//					+ "Value was: " + (v*5));
+//		};
 	}
 }

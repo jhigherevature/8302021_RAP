@@ -12,12 +12,12 @@ package com.revature.lambdas;
 @FunctionalInterface
 public interface HelloWorldInterface {
 	// the 'abstract' keyword is implied in interfaces
-	public /*abstract*/ void printHello();
+	public void printHello();
 	
 //	public void doSomethingElse();
 	
 	public default void alreadyImplemented() {
-		System.out.println("This is a default method. Doesnt prevent this"
-				+ "interface from being functional");
+		System.out.println("This is a default method. Doesn't prevent this"
+				+ " interface from being functional");
 	}
 }
